@@ -1,0 +1,204 @@
+<!--Пароль от бд: baeXhg2TVWlja93s-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+
+	<!-- Адаптация под мобильные устройства -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Цвет верхней панели браузера (дублирует theme_color из manifest) -->
+	<meta name="theme-color" content="#1e1e1e" />
+
+	<!-- Описание приложения -->
+	<meta name="description" content="Smart Dashboard PWA" />
+
+	<!-- Подключение manifest -->
+	<link rel="manifest" href="./manifest.json" />
+
+	<!-- Иконка -->
+	<link rel="icon" href="./favicon.ico" />
+
+	<!-- Поддержка iOS -->
+	<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<!-- Стили -->
+	<!--<link rel="stylesheet" href="./src/styles/reset.css" />
+	<link rel="stylesheet" href="./src/styles/variables.css" />
+	<link rel="stylesheet" href="./src/styles/main.css" />-->
+	<link rel="stylesheet" href="style.css" />
+
+	<title>Smart Dashboard</title>
+</head>
+<body>
+
+	<!-- Корневой контейнер SPA -->
+	<div id="app">
+		<div class="notes">
+			<h1>Заметки</h1>
+			<div>
+				<div>
+					<h3>Телефоны врачей</h3>
+					<div></div>
+				</div>
+				<div>
+					<h3>Новая заметка</h3>
+					<div></div>
+				</div>
+				<div>
+					<h3>Песня про кота</h3>
+					<div></div>
+				</div>
+			</div>
+		</div>
+		<div class="tasks">
+			<h1>Задачи</h1>
+			<div class="second_level">
+				 <div>
+					<div>01.01.2026</div>
+					<svg width="16" height="16" viewBox="0 0 16 16">
+						<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+					</svg>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Помыть полы</div>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Приготовить обед</div>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Полежать</div>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Сделать уроки</div>
+					</label>
+				</div>
+			</div>
+			<div class="second_level">
+				 <div>
+					<div>02.01.2026</div>
+					<svg width="16" height="16" viewBox="0 0 16 16">
+						<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+					</svg>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Заказать корм собаке</div>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Сходить в больницу</div>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Помыться</div>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox">
+						<div>Сделать уроки</div>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="settings">
+			<h1>Настройки</h1>
+			<div class="first_level">
+				<div>Тема</div>
+				<div>Системная</div>
+			</div>
+			<div class="first_level">
+				<div>Цвет</div>
+				<div>#BAFFF9</div>
+			</div>
+		</div>
+		<nav>
+			<div style="color: #336BFA;" id="button_notes">
+				<svg width="30" height="30" viewBox="0 0 16 16">
+					<path style="fill: #336BFA;" d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+					<path style="fill: #336BFA;" d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+				</svg>
+				Заметки
+			</div>
+			<div id="button_tasks">
+				<svg width="30" height="30" viewBox="0 0 16 16">
+					<path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+					<path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+				</svg>
+				Задачи
+			</div>
+			<div id="button_settings">
+				<svg width="30" height="30" viewBox="0 0 16 16">
+					<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+					<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+				</svg>
+				Настройки
+			</div>
+		</nav>
+	</div>
+
+	<!-- Основной JS (точка входа) -->
+	<script type="module" src="./src/main.js"></script>
+	<script>
+		notes = document.querySelector(".notes");
+		tasks = document.querySelector(".tasks");
+		settings = document.querySelector(".settings");
+		button_notes = document.querySelector("#button_notes");
+		button_tasks = document.querySelector("#button_tasks");
+		button_settings = document.querySelector("#button_settings");
+		button_notes.onclick = () => {
+			notes.style.display = "block";
+			tasks.style.display = "none";
+			settings.style.display = "none";
+			button_notes.style.color = "#336BFA";
+			Array.from(button_notes.firstElementChild.children).forEach((e) => e.style.fill = "#336BFA");
+			button_tasks.style.color = "#09A39B";
+			Array.from(button_tasks.firstElementChild.children).forEach((e) => e.style.fill = "#09A39B");
+			button_settings.style.color = "#09A39B";
+			Array.from(button_settings.firstElementChild.children).forEach((e) => e.style.fill = "#09A39B");
+		};
+		button_tasks.onclick = () => {
+			notes.style.display = "none";
+			tasks.style.display = "block";
+			settings.style.display = "none";
+			button_notes.style.color = "#09A39B";
+			Array.from(button_notes.firstElementChild.children).forEach((e) => e.style.fill = "#09A39B");
+			button_tasks.style.color = "#336BFA";
+			Array.from(button_tasks.firstElementChild.children).forEach((e) => e.style.fill = "#336BFA");
+			button_settings.style.color = "#09A39B";
+			Array.from(button_settings.firstElementChild.children).forEach((e) => e.style.fill = "#09A39B");
+		};
+		button_settings.onclick = () => {
+			notes.style.display = "none";
+			tasks.style.display = "none";
+			settings.style.display = "block";
+			button_notes.style.color = "#09A39B";
+			Array.from(button_notes.firstElementChild.children).forEach((e) => e.style.fill = "#09A39B");
+			button_tasks.style.color = "#09A39B";
+			Array.from(button_tasks.firstElementChild.children).forEach((e) => e.style.fill = "#09A39B");
+			button_settings.style.color = "#336BFA";
+			Array.from(button_settings.firstElementChild.children).forEach((e) => e.style.fill = "#336BFA");
+		};
+	</script>
+
+</body>
+</html>
