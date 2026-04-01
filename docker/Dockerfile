@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Копируем корневой package.json и устанавливаем зависимости
 COPY package.json ./
-RUN npm installT
+RUN npm install
 
 # Копируем весь серверный код
 COPY server/ ./server/
