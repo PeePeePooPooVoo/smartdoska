@@ -1,18 +1,31 @@
-# Базовый образ nginx
-FROM nginx:alpine
+# ========== Backend ==========
+FROM node:20-alpine AS backend
 
-# Удаляем стандартный контент nginx
+WORKDIR /app
+
+# Копируем корневой package.json и устанавливаем зависимости
+COPY package.json ./
+RUN npm installT
+
+# Копируем весь серверный код
+COPY server/ ./server/
+
+# Команда запуска backend
+CMD ["node", "server/server.js"]
+
+# ========== Frontend ==========
+FROM nginx:alpine AS frontend
+
+# Удаляем стандартный html
 RUN rm -rf /usr/share/nginx/html/*
 
-# Копируем public и src в контейнер
-COPY public /usr/share/nginx/html/public
-COPY src /usr/share/nginx/html/src
+# Копируем фронтенд файлы
+COPY public/ /usr/share/nginx/html/public/
+COPY src/ /usr/share/nginx/html/src/
 
-# Копируем конфиг nginx
+# Копируем Nginx конфиг
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-# Экспонируем порт
 EXPOSE 3000
 
-# Запуск nginx в фоновом режиме
 CMD ["nginx", "-g", "daemon off;"]

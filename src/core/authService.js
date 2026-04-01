@@ -1,21 +1,29 @@
-const API_URL = "http://localhost:4000/api";
+import { supabase } from './supabaseClient.js';
 
-// Регистрация
-export async function registerUser(email, password) {
-  const res = await fetch(`${API_URL}/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password })
+export async function login(email, password) {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password
   });
-  return res.json();
+
+  if (error) throw error;
+  return data;
 }
 
-// Логин
-export async function loginUser(email, password) {
-  const res = await fetch(`${API_URL}/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password })
+export async function register(email, password) {
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password
   });
-  return res.json();
+
+  if (error) throw error;
+  return data;
+}
+
+export async function logout() {
+  await supabase.auth.signOut();
+}
+
+export function getCurrentUser() {
+  return supabase.auth.getUser();
 }

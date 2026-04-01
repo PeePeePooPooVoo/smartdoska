@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import authRoutes from "./authRoutes.js";
 
+
 dotenv.config();
 
 const app = express();

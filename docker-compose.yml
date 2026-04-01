@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: backend
+    container_name: backend
+    ports:
+      - "4000:4000"
+    networks:
+      - smartdoska-net
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - smartdoska-net
+
+networks:
+  smartdoska-net:
+    driver: bridge
