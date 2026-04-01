@@ -1,5 +1,6 @@
 import { initRouter } from "./core/router.js";
 import { initUI } from "./core/uiContainer.js";
+import './supabaseClient.js'; // просто подключаем, чтобы window.supabase был определён
 
 // Точка входа приложения
 function initApp() {
